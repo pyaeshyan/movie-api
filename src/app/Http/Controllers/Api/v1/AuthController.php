@@ -75,4 +75,13 @@ class AuthController extends Controller
             'user' => UserResource::make($user),
         ]);
     }
+
+    public function logout(Request $request)
+    {
+        $request->user()->token()->revoke();
+        return response()->json([
+            'message' => 'Logout successful',
+            'success' => true
+        ]);
+    }
 }
