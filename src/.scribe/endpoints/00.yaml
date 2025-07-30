@@ -1,0 +1,678 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/admin/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: carolyne.luettgen@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: ij-e/dl4m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'The value and <code>password</code> must match.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: consequatur
+      email: carolyne.luettgen@example.org
+      password: ij-e/dl4m
+      password_confirmation: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/admin/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: qkunze@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: qkunze@example.com
+      password: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/admin/movies/detail/{movie_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      movie_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/admin/movies/list
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/admin/movies/create
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      summary:
+        name: summary
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      cover_image:
+        name: cover_image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      imdb_rating:
+        name: imdb_rating
+        description: ''
+        required: true
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      pdf_link:
+        name: pdf_link
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.moore.com/dolor-dolores-minus-voluptatem-quisquam-quibusdam-sed-vel.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      author_id:
+        name: author_id
+        description: 'The <code>id</code> of an existing record in the authors table.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      genres:
+        name: genres
+        description: 'The <code>id</code> of an existing record in the genres table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tags:
+        name: tags
+        description: 'The <code>id</code> of an existing record in the tags table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      title: consequatur
+      summary: consequatur
+      imdb_rating: 11613.31890586
+      pdf_link: 'http://www.moore.com/dolor-dolores-minus-voluptatem-quisquam-quibusdam-sed-vel.html'
+      author_id: consequatur
+    fileParameters:
+      cover_image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/admin/movies/update/{movie_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      movie_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      summary:
+        name: summary
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      cover_image:
+        name: cover_image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      imdb_rating:
+        name: imdb_rating
+        description: ''
+        required: false
+        example: 11613.31890586
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      pdf_link:
+        name: pdf_link
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://www.moore.com/dolor-dolores-minus-voluptatem-quisquam-quibusdam-sed-vel.html'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      author_id:
+        name: author_id
+        description: 'The <code>id</code> of an existing record in the authors table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      genres:
+        name: genres
+        description: 'The <code>id</code> of an existing record in the genres table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tags:
+        name: tags
+        description: 'The <code>id</code> of an existing record in the tags table.'
+        required: false
+        example: null
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      title: consequatur
+      summary: consequatur
+      imdb_rating: 11613.31890586
+      pdf_link: 'http://www.moore.com/dolor-dolores-minus-voluptatem-quisquam-quibusdam-sed-vel.html'
+    fileParameters:
+      cover_image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/admin/movies/{movie_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      movie_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/public/movies
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"Movies fetched successfully","success":true,"movies":{"current_page":1,"data":[{"id":2,"title":"Qui magnam ut.","summary":"Repudiandae dolor voluptatem placeat nemo fuga. Dolores excepturi aliquam in in corporis impedit. Consequatur eos veniam ad nam quas id. Labore reiciendis necessitatibus amet ab eos.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00ff77?text=movies+perspiciatis","imdb_rating":2.1,"pdf_link":"http:\/\/www.gleichner.net\/impedit-quia-molestiae-ut-magnam-velit-ut-ratione","author_id":7,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":4,"author":{"id":7,"name":"Loyal Bode DDS","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"genre_id":5}},{"id":6,"name":"consequuntur","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"genre_id":6}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":5}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":6}}]},{"id":3,"title":"Consequatur similique aut nostrum.","summary":"Vero iusto nihil itaque quaerat voluptatem velit. Sunt ab quia sequi voluptatem possimus nesciunt quo autem. Ad quo soluta quod amet dolores praesentium est.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/0011ee?text=movies+id","imdb_rating":3.3,"pdf_link":"http:\/\/predovic.org\/cumque-quam-voluptate-maxime-dignissimos-quia-labore.html","author_id":8,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":8,"name":"Devon Oberbrunner","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":3,"name":"voluptatem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":3,"genre_id":3}},{"id":10,"name":"aperiam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":3,"genre_id":10}}],"tags":[{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":3,"tag_id":6}},{"id":7,"name":"nulla","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":3,"tag_id":7}},{"id":10,"name":"magnam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":3,"tag_id":10}}]},{"id":4,"title":"Nemo est beatae non.","summary":"Dolorem deleniti ratione sint explicabo aliquid placeat incidunt magnam. Nisi ea aut id vero odio voluptatibus. Voluptatem et et voluptatum voluptatum voluptatem qui ea. Enim suscipit voluptas quo eum dicta dolores minima quos. Autem recusandae aliquam illum.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/003355?text=movies+dolorem","imdb_rating":8.5,"pdf_link":"http:\/\/www.dubuque.net\/nemo-ea-fuga-quam-reiciendis-a-repellat-labore.html","author_id":9,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":9,"name":"Princess Robel","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":2,"name":"officia","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"genre_id":2}},{"id":10,"name":"aperiam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"genre_id":10}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":5}},{"id":7,"name":"nulla","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":7}}]},{"id":5,"title":"Et doloribus tempore sint officia.","summary":"Aut molestias ut sed reprehenderit. Corrupti repellat repellat sit explicabo quas. Asperiores consequuntur dicta quis.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/003366?text=movies+animi","imdb_rating":2.3,"pdf_link":"http:\/\/www.gutmann.com\/molestias-ipsam-vel-eos-quo.html","author_id":10,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":10,"name":"Nia Witting","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":5,"genre_id":1}},{"id":3,"name":"voluptatem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":5,"genre_id":3}}],"tags":[{"id":3,"name":"sed","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":5,"tag_id":3}},{"id":4,"name":"beatae","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":5,"tag_id":4}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":5,"tag_id":5}}]},{"id":6,"title":"Provident atque recusandae neque.","summary":"Corrupti quae alias sed aut dolores quia. Eligendi nisi qui enim a blanditiis. Labore optio est nulla perferendis omnis debitis. Expedita voluptatibus quibusdam fugiat deleniti sit dicta dolore.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/0022aa?text=movies+laborum","imdb_rating":2.5,"pdf_link":"https:\/\/miller.com\/atque-tempora-cupiditate-debitis-omnis.html","author_id":11,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":11,"name":"Triston Hagenes","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":6,"genre_id":1}},{"id":10,"name":"aperiam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":6,"genre_id":10}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":6,"tag_id":2}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":6,"tag_id":6}},{"id":8,"name":"autem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":6,"tag_id":8}}]},{"id":7,"title":"Ullam nostrum iure vitae.","summary":"Sit dolorem excepturi accusamus consectetur cum repellendus cumque. Qui sit amet qui.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/002233?text=movies+adipisci","imdb_rating":3.4,"pdf_link":"https:\/\/thiel.info\/suscipit-iste-nobis-officiis-voluptas-consectetur.html","author_id":12,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":12,"name":"Miss Juliet Carter","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":7,"genre_id":5}},{"id":9,"name":"quas","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":7,"genre_id":9}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":7,"tag_id":2}},{"id":3,"name":"sed","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":7,"tag_id":3}},{"id":8,"name":"autem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":7,"tag_id":8}}]},{"id":8,"title":"Saepe harum culpa.","summary":"Nam perferendis eum non facilis molestiae. Repudiandae repellat aut laudantium voluptate ut. Possimus beatae fugiat nihil numquam. Aut et culpa error.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00ee66?text=movies+dolor","imdb_rating":1.6,"pdf_link":"https:\/\/ondricka.info\/dolores-ipsum-nesciunt-ea-eos-minus.html","author_id":13,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":13,"name":"Omari Yost","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":3,"name":"voluptatem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":8,"genre_id":3}},{"id":7,"name":"consequatur","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":8,"genre_id":7}}],"tags":[{"id":3,"name":"sed","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":8,"tag_id":3}},{"id":4,"name":"beatae","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":8,"tag_id":4}},{"id":8,"name":"autem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":8,"tag_id":8}}]},{"id":9,"title":"Porro sint dignissimos.","summary":"Iste recusandae dolores et et. Omnis quo ad minus error. Eum veniam ut nulla tenetur dolore sed est animi. Voluptatem mollitia labore dignissimos odit quam.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/001166?text=movies+laboriosam","imdb_rating":7.5,"pdf_link":"http:\/\/stoltenberg.com\/impedit-tenetur-commodi-adipisci-voluptate-quia-dolor-tempora","author_id":14,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":14,"name":"Dr. Mack D''Amore PhD","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"genre_id":1}},{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"genre_id":5}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":2}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":6}},{"id":8,"name":"autem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":8}}]},{"id":10,"title":"Voluptates sit voluptatem cumque.","summary":"Quo iste maxime excepturi. Et labore earum libero unde eos.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/002244?text=movies+laboriosam","imdb_rating":2.8,"pdf_link":"http:\/\/www.purdy.biz\/","author_id":15,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":15,"name":"Clinton Walsh","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":2,"name":"officia","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":10,"genre_id":2}},{"id":6,"name":"consequuntur","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":10,"genre_id":6}}],"tags":[{"id":4,"name":"beatae","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":10,"tag_id":4}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":10,"tag_id":5}},{"id":9,"name":"architecto","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":10,"tag_id":9}}]},{"id":11,"title":"Recusandae repellat aut.","summary":"Repellendus a quidem impedit et ea. Praesentium molestiae repellat ad culpa accusantium recusandae voluptatem.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00dd44?text=movies+necessitatibus","imdb_rating":9.2,"pdf_link":"https:\/\/lang.com\/commodi-nulla-earum-suscipit-impedit-qui.html","author_id":16,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","comments_count":3,"author":{"id":16,"name":"Landen Hagenes","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":2,"name":"officia","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"genre_id":2}},{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"genre_id":5}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":5}},{"id":9,"name":"architecto","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":9}}]}],"first_page_url":"http:\/\/localhost\/api\/v1\/public\/movies?page=1","from":1,"last_page":3,"last_page_url":"http:\/\/localhost\/api\/v1\/public\/movies?page=3","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/v1\/public\/movies?page=1","label":"1","active":true},{"url":"http:\/\/localhost\/api\/v1\/public\/movies?page=2","label":"2","active":false},{"url":"http:\/\/localhost\/api\/v1\/public\/movies?page=3","label":"3","active":false},{"url":"http:\/\/localhost\/api\/v1\/public\/movies?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost\/api\/v1\/public\/movies?page=2","path":"http:\/\/localhost\/api\/v1\/public\/movies","per_page":10,"prev_page_url":null,"to":10,"total":23}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/public/movies/{movie_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      movie_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"message":"Movie fetched successfully","success":true,"movie":{"id":2,"title":"Qui magnam ut.","summary":"Repudiandae dolor voluptatem placeat nemo fuga. Dolores excepturi aliquam in in corporis impedit. Consequatur eos veniam ad nam quas id. Labore reiciendis necessitatibus amet ab eos.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00ff77?text=movies+perspiciatis","imdb_rating":2.1,"pdf_link":"http:\/\/www.gleichner.net\/impedit-quia-molestiae-ut-magnam-velit-ut-ratione","author_id":7,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","author":{"id":7,"name":"Loyal Bode DDS","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},"genres":[{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"genre_id":5}},{"id":6,"name":"consequuntur","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"genre_id":6}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":5}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":2,"tag_id":6}}],"comments":[{"id":4,"movie_id":2,"name":"Dr. Afton Will III","email":"therese26@example.net","comment":"Sit a ea voluptatum non laborum placeat tempore.","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},{"id":5,"movie_id":2,"name":"Dr. Buster Gutkowski DVM","email":"king.nyasia@example.org","comment":"Aut impedit qui dolores illo.","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},{"id":6,"movie_id":2,"name":"Jayde Lubowitz","email":"tiana60@example.org","comment":"Et sapiente doloremque cupiditate id.","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"},{"id":61,"movie_id":2,"name":"adfafd","email":"fasdf@jkljio.com","comment":"fasdfasd","created_at":"2025-07-30T06:50:15.000000Z","updated_at":"2025-07-30T06:50:15.000000Z"}]},"related_movies":[{"id":15,"title":"Est sit qui.","summary":"Quas voluptatem ipsam velit voluptatem officia ullam labore. Dolorem aut voluptatem dolorum vel est. Molestias sit sapiente in fugit. Aliquid rerum velit inventore asperiores.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00eecc?text=movies+quaerat","imdb_rating":9.3,"pdf_link":"http:\/\/www.towne.com\/","author_id":20,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","genres":[{"id":7,"name":"consequatur","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":15,"genre_id":7}},{"id":9,"name":"quas","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":15,"genre_id":9}}],"tags":[{"id":3,"name":"sed","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":15,"tag_id":3}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":15,"tag_id":6}},{"id":10,"name":"magnam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":15,"tag_id":10}}],"author":{"id":20,"name":"Alessandra Kuhlman","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":11,"title":"Recusandae repellat aut.","summary":"Repellendus a quidem impedit et ea. Praesentium molestiae repellat ad culpa accusantium recusandae voluptatem.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/00dd44?text=movies+necessitatibus","imdb_rating":9.2,"pdf_link":"https:\/\/lang.com\/commodi-nulla-earum-suscipit-impedit-qui.html","author_id":16,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","genres":[{"id":2,"name":"officia","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"genre_id":2}},{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"genre_id":5}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":5}},{"id":9,"name":"architecto","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":11,"tag_id":9}}],"author":{"id":16,"name":"Landen Hagenes","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":4,"title":"Nemo est beatae non.","summary":"Dolorem deleniti ratione sint explicabo aliquid placeat incidunt magnam. Nisi ea aut id vero odio voluptatibus. Voluptatem et et voluptatum voluptatum voluptatem qui ea. Enim suscipit voluptas quo eum dicta dolores minima quos. Autem recusandae aliquam illum.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/003355?text=movies+dolorem","imdb_rating":8.5,"pdf_link":"http:\/\/www.dubuque.net\/nemo-ea-fuga-quam-reiciendis-a-repellat-labore.html","author_id":9,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","genres":[{"id":2,"name":"officia","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"genre_id":2}},{"id":10,"name":"aperiam","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"genre_id":10}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":2}},{"id":5,"name":"non","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":5}},{"id":7,"name":"nulla","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":4,"tag_id":7}}],"author":{"id":9,"name":"Princess Robel","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":9,"title":"Porro sint dignissimos.","summary":"Iste recusandae dolores et et. Omnis quo ad minus error. Eum veniam ut nulla tenetur dolore sed est animi. Voluptatem mollitia labore dignissimos odit quam.","cover_image":"https:\/\/via.placeholder.com\/640x480.png\/001166?text=movies+laboriosam","imdb_rating":7.5,"pdf_link":"http:\/\/stoltenberg.com\/impedit-tenetur-commodi-adipisci-voluptate-quia-dolor-tempora","author_id":14,"created_by":null,"updated_by":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"genre_id":1}},{"id":5,"name":"quo","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"genre_id":5}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":2}},{"id":6,"name":"qui","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":6}},{"id":8,"name":"autem","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":9,"tag_id":8}}],"author":{"id":14,"name":"Dr. Mack D''Amore PhD","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":23,"title":"fasdfasdf","summary":"fasdfasdfsdfasdfasdfasdfasdf","cover_image":"public\/movies\/s8dL0N3yOW7WWIANutL8ZWo80JscmFP5vhrb3Sji.png","imdb_rating":6.7,"pdf_link":null,"author_id":1,"created_by":null,"updated_by":null,"created_at":"2025-07-30T06:13:57.000000Z","updated_at":"2025-07-30T06:13:57.000000Z","genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":23,"genre_id":1}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":23,"tag_id":2}}],"author":{"id":1,"name":"Dr. Lorenzo Quitzon DVM","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":24,"title":"fasdfasdf","summary":"fasdfasdfsdfasdfasdfasdfasdf","cover_image":"http:\/\/localhost:8000\/storage\/movies\/pd0c6zjrxm7Jr6uKZAmmzdIBFFNfLNa7dZhUQ60T.png","imdb_rating":6.7,"pdf_link":null,"author_id":1,"created_by":null,"updated_by":null,"created_at":"2025-07-30T06:16:29.000000Z","updated_at":"2025-07-30T06:25:38.000000Z","genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":24,"genre_id":1}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":24,"tag_id":2}}],"author":{"id":1,"name":"Dr. Lorenzo Quitzon DVM","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}},{"id":22,"title":"fasdfasdf","summary":"fasdfasdfsdfasdfasdfasdfasdf","cover_image":"var\/www\/storage\/app\/public\/movies\/inNbSVzoBz6UeWblOETTdkIpUu3pEaFqncMrV4d0.png","imdb_rating":6.7,"pdf_link":null,"author_id":1,"created_by":null,"updated_by":null,"created_at":"2025-07-30T06:12:38.000000Z","updated_at":"2025-07-30T06:12:38.000000Z","genres":[{"id":1,"name":"iure","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":22,"genre_id":1}}],"tags":[{"id":2,"name":"error","created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z","pivot":{"movie_id":22,"tag_id":2}}],"author":{"id":1,"name":"Dr. Lorenzo Quitzon DVM","bio":null,"created_at":"2025-07-30T04:20:52.000000Z","updated_at":"2025-07-30T04:20:52.000000Z"}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/public/movies/{movie_id}/comments'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      movie_id:
+        name: movie_id
+        description: 'The ID of the movie.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      movie_id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 100 characters.'
+        required: true
+        example: vmqeopfuudtdsufvyvddq
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: kunde.eloisa@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      comment:
+        name: comment
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: vmqeopfuudtdsufvyvddq
+      email: kunde.eloisa@example.com
+      comment: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -17,3 +17,20 @@ Route::middleware('auth:api')->group(function () {
         Route::delete('/{movie}', [MovieController::class, 'destroy']);
     });
 });
+
+/**
+ * Get all movies (Admin).
+ *
+ * @group Admin > Movies
+ * @authenticated
+ * 
+ * @response 200 {
+ *   "data": [
+ *     {
+ *       "id": 1,
+ *       "title": "Inception",
+ *       "author": "Christopher Nolan"
+ *     }
+ *   ]
+ * }
+ */
